@@ -1,0 +1,18 @@
+@Given("user on login page")
+public void user_on_login_page()
+{
+driver.get("www.facebooklogin.com")
+}
+
+@When("user enter credentials")
+public void user_enter_credentials()
+{
+driver.findElement(By.id("uname").sendKeys("sisirathomas92@gmail.com"));
+driver.findElement(By.id("submit").click());
+}
+
+@Then("user logged in")
+public void user_logged_in()
+{
+driver.findElement(By.id("submit").click());
+}
